@@ -28,7 +28,7 @@ audio {
 	padding: 0;
 	color: white;
 	text-align: right;
-	margin-top: 40px;
+	margin-top: 0px;
 	font-size: 1.3em;
 }
 
@@ -81,8 +81,8 @@ audio {
 	font-weight: bold;
 	color: white;
 	width: 980px;
-	margin-top: 300px;
 	margin: 0 auto;
+	margin-top: 300px;
 	text-align: center;
 }
 
