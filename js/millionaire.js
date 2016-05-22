@@ -139,7 +139,7 @@ var MillionaireModel = function(data) {
  				self.money($(".active").data('amt'));
  				if(self.level() + 1 > 15) {
 	 				$("#game").fadeOut('slow', function() {
-	 					$("#game-over").html('You Win!');
+						$("#game-over").html('Voitit!');
 	 					$("#game-over").fadeIn('slow');
 						stopSound('background');
 	 				});
@@ -162,7 +162,7 @@ var MillionaireModel = function(data) {
  			startSound('wrongsound', false);
  			$("#" + elm).css('background', 'red').slideDown('slow', function() {
  				$("#game").fadeOut('slow', function() {
- 					$("#game-over").html('Game Over!');
+					$("#game-over").html('Hävisit!');
  					$("#game-over").fadeIn('slow');
  					self.transitioning = false;
 					stopSound('background');
