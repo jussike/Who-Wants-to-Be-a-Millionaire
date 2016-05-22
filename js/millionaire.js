@@ -37,6 +37,18 @@ startSound = function(id, loop) {
 }
 
 /**
+* Stops a sound via HTML5 through Audio tags on the page
+*
+* @require the id must be the id of an <audio> tag.
+* @param id the id of the element to stop
+*/
+stopSound = function(id) {
+	soundHandle = document.getElementById(id);
+	soundHandle.pause();
+	soundHandle.currentTime = 0;
+}
+
+/**
 * The View Model that represents one game of
 * Who Wants to Be a Millionaire.
 * 
@@ -129,6 +141,7 @@ var MillionaireModel = function(data) {
 	 				$("#game").fadeOut('slow', function() {
 	 					$("#game-over").html('You Win!');
 	 					$("#game-over").fadeIn('slow');
+						stopSound('background');
 	 				});
  				} else {
  					self.level(self.level() + 1);
@@ -152,6 +165,7 @@ var MillionaireModel = function(data) {
  					$("#game-over").html('Game Over!');
  					$("#game-over").fadeIn('slow');
  					self.transitioning = false;
+					stopSound('background');
  				});
  			});
  		});
